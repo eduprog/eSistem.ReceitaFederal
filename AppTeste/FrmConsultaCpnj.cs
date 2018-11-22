@@ -8,7 +8,6 @@ namespace AppTeste
 {
     public partial class FrmConsultaCpnj : Form
     {
-
         public FrmConsultaCpnj() // ALTEREI O NOME DO FORMULARIO PARA NOME COMUM, PARA NAO CONFUNDIR COM A CLASSE ConsultaCNPJReceita
         {
             InitializeComponent();
@@ -26,10 +25,7 @@ namespace AppTeste
                 tb.Clear();
             }
             ConsultaCnpj();
-
         }
-
-
 
         private void LimpaCampoCnpj()
         {
@@ -39,10 +35,6 @@ namespace AppTeste
                 txtCNPJ.Focus();
             }));
         }
-
-
-
-
 
         private void ConsultaCnpj()
         {
@@ -86,7 +78,7 @@ namespace AppTeste
                 txtMotivoSituacaoCadastral.Text = cnpj.motivo_situacao;
                 txtSituacaoEspecial.Text = cnpj.situacao_especial;
                 txtDataSituacaoEspecial.Text = $"{cnpj.data_situacao_especial:dd/MM/yyyy}";
-                lblDataConsulta.Text = $"Efetuada: {cnpj.ultima_atualizacao.Substring(0,10):dd/MM/yyyy}" ;
+                lblDataConsulta.Text = $"Efetuada: {cnpj.ultima_atualizacao.Substring(0, 10):dd/MM/yyyy}";
                 this.Refresh();
             }
             catch (Exception e)
